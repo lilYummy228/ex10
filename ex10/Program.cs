@@ -10,24 +10,24 @@ namespace ex10
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
-            int number = rand.Next(0, 100);
+            Random random = new Random();
+            int number = random.Next(0, 100);
             Console.WriteLine($"Рандомное число: {number}");
             int sumOfNumbers = 0;
+            int divisible3 = 3;
+            int divisible5 = 5;
+            int startNumber = 1;
 
-            for (int i = 1; i <= number; i++)
+            for (int i = startNumber; i <= number; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                if (i % divisible3 == 0 || i % divisible5 == 0)
                 {
                     sumOfNumbers += i;
-                    Console.WriteLine($"Число кратное 3 или 5: {i}");
-                }
-                else
-                {
-                    continue;
+                    Console.WriteLine($"Число кратное {divisible3} или {divisible5}: {i}");
                 }
             }
-                Console.WriteLine($"Сумма чисел равна: {sumOfNumbers}");
+
+            Console.WriteLine($"Сумма чисел равна: {sumOfNumbers}");
         }
     }
 }
