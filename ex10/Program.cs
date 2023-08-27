@@ -10,20 +10,22 @@ namespace ex10
     {
         static void Main(string[] args)
         {
+            int from = 0;
+            int to = 100;
             Random random = new Random();
-            int number = random.Next(0, 100);
+            int number = random.Next(from, to);
             Console.WriteLine($"Рандомное число: {number}");
             int sumOfNumbers = 0;
-            int divisible3 = 3;
-            int divisible5 = 5;
+            int firstNumber = 3;
+            int secondNumber = 5;
             int startNumber = 1;
 
             for (int i = startNumber; i <= number; i++)
             {
-                if (i % divisible3 == 0 || i % divisible5 == 0)
+                if (i % firstNumber == 0 || i % secondNumber == 0)
                 {
                     sumOfNumbers += i;
-                    Console.WriteLine($"Число кратное {divisible3} или {divisible5}: {i}");
+                    Console.WriteLine($"Число кратное {firstNumber} или {secondNumber}: {i}");
                 }
             }
 
