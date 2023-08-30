@@ -10,10 +10,10 @@ namespace ex10
     {
         static void Main(string[] args)
         {
-            int fromNumber = 0;
-            int toNumber = 100;
+            int minRandomValue = 0;
+            int maxRandomValue = 100;
             Random random = new Random();
-            int number = random.Next(fromNumber, toNumber);
+            int number = random.Next(minRandomValue, maxRandomValue);
             Console.WriteLine($"Рандомное число: {number}");
             int sumOfNumbers = 0;
             int firstNumber = 3;
